@@ -1,10 +1,10 @@
 # Site
-name: "Street Cat Photo Blog"
-title: "Street Cat Photo Blog"
-description: "Pictures of Cats"
+name: "Street Cat's Recommended Outlets"
+title: "Street Cat's Recommended Outlets"
+description: "find based content here"
 logo: 'assets/images/avatar-icon.jpg'
 favicon: 'assets/images/favicon.ico'
-baseurl: /photo
+baseurl: /recs
 google_analytics: 
 disqus: 
 mailchimp-list: 
