@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Transcend"
+title:  "Transcend Crew"
 author: street_cat
 categories: [ streamer, 2slgbtqia+ ]
 image: assets/images/trans.jpg
