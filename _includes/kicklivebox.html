@@ -56,82 +56,81 @@
             </div>
         </div>
     </div>
-</div>
-
-<style>
-.kick-post .kick-status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
-    background: rgba(255, 0, 0, 0.05);
-    border-left: 2px solid #ff0000;
-    border-radius: 0 3px 3px 0;
-}
-
-.kick-post .live-badge {
-    color: #ff0000;
-    font-weight: 500;
-}
-
-.kick-post .watch-link {
-    color: #6e00ff;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.kick-post .watch-link:hover {
-    text-decoration: underline;
-}
-</style>
-
-<script>
-(function() {
-    const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
-    const post = document.currentScript.parentElement;
-    //const channel = post.dataset.channel;
-    const channel = '{{ post.live }}';
-    //console.log(channel);
-    let isLive = false;
-
-    async function checkLivestream() {
-        try {
-            const cacheKey = `kick_${channel}`;
-            const cached = localStorage.getItem(cacheKey);
-            const now = Date.now();
-            
-            // Check cache first
-            if (cached) {
-                const { isLive, timestamp } = JSON.parse(cached);
-                if (now - timestamp < CACHE_TTL) {
-                    if (isLive) post.style.display = 'block';
-                    return;
-                }
-            }
-
-            // Single API call - response is null when offline
-            const response = await fetch(`https://kick.com/api/v2/channels/${channel}/livestream`);
-            const data = await response.json();
-            //console.log(data);
-            if (data !== null) { 
-                isLive = true 
-                post.style.display = 'block';               
-            }
-            
-            // Update cache
-            localStorage.setItem(cacheKey, JSON.stringify({
-                isLive,
-                timestamp: now
-            }));
-            
-        } catch (error) {
-            console.error("Error checking stream status:", error);
-            // Optional: Fallback to cached value if available
-        }
+    <style>
+    .kick-post .kick-status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        background: rgba(255, 0, 0, 0.05);
+        border-left: 2px solid #ff0000;
+        border-radius: 0 3px 3px 0;
     }
     
-    // Run the check when the page loads
-    document.addEventListener('DOMContentLoaded', checkLivestream);
-})();
-</script>
+    .kick-post .live-badge {
+        color: #ff0000;
+        font-weight: 500;
+    }
+    
+    .kick-post .watch-link {
+        color: #6e00ff;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    
+    .kick-post .watch-link:hover {
+        text-decoration: underline;
+    }
+    </style>
+    
+    <script>
+        (function() {
+            const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+            const post = document.currentScript.parentElement;
+            //const channel = post.dataset.channel;
+            const channel = '{{ post.live }}';
+            //console.log(channel);
+            let isLive = false;
+        
+            async function checkLivestream() {
+                try {
+                    const cacheKey = `kick_${channel}`;
+                    const cached = localStorage.getItem(cacheKey);
+                    const now = Date.now();
+                    
+                    // Check cache first
+                    if (cached) {
+                        const { isLive, timestamp } = JSON.parse(cached);
+                        if (now - timestamp < CACHE_TTL) {
+                            if (isLive) post.style.display = 'block';
+                            return;
+                        }
+                    }
+        
+                    // Single API call - response is null when offline
+                    const response = await fetch(`https://kick.com/api/v2/channels/${channel}/livestream`);
+                    const data = await response.json();
+                    //console.log(data);
+                    if (data !== null) { 
+                        isLive = true 
+                        post.style.display = 'block';               
+                    }
+                    
+                    // Update cache
+                    localStorage.setItem(cacheKey, JSON.stringify({
+                        isLive,
+                        timestamp: now
+                    }));
+                    
+                } catch (error) {
+                    console.error("Error checking stream status:", error);
+                    // Optional: Fallback to cached value if available
+                }
+            }
+            
+            // Run the check when the page loads
+            document.addEventListener('DOMContentLoaded', checkLivestream);
+        })();
+    </script>
+</div>
 <!-- end post -->
