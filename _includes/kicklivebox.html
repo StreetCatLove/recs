@@ -85,7 +85,7 @@
     
     <script>
         (function() {
-            const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+            const CACHE_TTL = 60 * 1000; // * 5; // 5 minutes cache
             const post = document.currentScript.parentElement;
             //const channel = post.dataset.channel;
             const channel = '{{ post.live }}';
