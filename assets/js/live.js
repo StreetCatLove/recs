@@ -1,4 +1,4 @@
-async function checkLivestreamKick() {
+async function checkLivestreamKick(channel) {
             try {
                 // Check cache
                 const cacheKey = `kick_${channel}`;
