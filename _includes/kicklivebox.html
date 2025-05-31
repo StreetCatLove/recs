@@ -112,6 +112,7 @@
                 // Single API call - response will be null if not live
                 const response = await fetch(`https://kick.com/api/v2/channels/${channel}/livestream`);
                 const data = await response.json();
+                console.log("API response status:", data);
                 const isLive = data !== null; // Simplified check
                 
                 // Update cache
