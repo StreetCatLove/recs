@@ -85,8 +85,7 @@
     
     <script>
     (function() {
-        //set id
-        const id = "u1um6xd5bkcqi2ou8xclo4vytuzx59";
+
         // More reliable element targeting
         const container = document.currentScript ? document.currentScript.parentElement : null;
         if (!container) {
@@ -99,10 +98,10 @@
         
         // Run check with multiple initialization options
         if (document.readyState === 'complete') {
-            checkLivestreamTwitch(channel, container, id);
+            checkLivestreamTwitch(channel, container;
         } else {
-            window.addEventListener('load', checkLivestreamTwitch(channel, container, id));
-            document.addEventListener('DOMContentLoaded', checkLivestreamTwitch(channel, container, id));
+            window.addEventListener('load', checkLivestreamTwitch(channel, container));
+            document.addEventListener('DOMContentLoaded', checkLivestreamTwitch(channel, container));
         }
     })();
     </script>
