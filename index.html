@@ -18,7 +18,7 @@ title: Home
 
         {% if post.platform == 'kick' %}
 
-            {% <script>isKickStreamLive(post.live)</script> == true %}
+            {% <%= isKickStreamLive(post.live)  %> == true %}
 
                 {% include featuredbox.html %}
 
