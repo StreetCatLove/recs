@@ -117,7 +117,7 @@
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const data = await response.json();
-                const isLive = data !== null;
+                const isLive = data && data.id && data.session_title;
                 
                 // Update cache
                 localStorage.setItem(cacheKey, JSON.stringify({
