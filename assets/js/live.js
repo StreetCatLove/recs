@@ -53,6 +53,8 @@ async function checkLivestreamTwitch(channel, container) {
 		    	//embed approach
 			const iframe = document.createElement('iframe');
 			iframe.src = `https://player.twitch.tv/?channel=${channel}&parent=${location.hostname}`;
+		    	iframe.channel = ${channel} ;
+		    	ifrane.parent = ${location.hostname} ;
 			iframe.style.display = 'none';
 			
 			// Event handlers
