@@ -111,11 +111,7 @@
                 }
                 
                 // Fetch fresh data
-                const userRes = await fetch(`https://kick.com/api/v2/channels/${channel}`);
-                if (!userRes.ok) continue;
-                const userData = await userRes.json();
-                
-                const streamRes = await fetch(`https://kick.com/api/v2/channels/${userData.id}/livestream`);
+                const streamRes = await fetch(`https://kick.com/api/v2/channels/${channel}/livestream`);
                 const streamData = await streamRes.json();
                 const isLive = streamData.is_live;
                 
