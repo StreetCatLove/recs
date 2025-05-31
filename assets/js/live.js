@@ -44,10 +44,10 @@ async function checkLivestreamTwitch(channel, container) {
                         const now = Date.now();
                         
                         if (cached) {
-                                    const { isLive, timestamp } = JSON.parse(cached);
-                                    if (now - timestamp < CACHE_TTL) {
-	                                    if (isLive) showContainer(container);
-	                                    return;
+                                const { isLive, timestamp } = JSON.parse(cached);
+                                if (now - timestamp < CACHE_TTL) {
+	                                if (isLive) showContainer(container);
+	                                return;
                         	}
                         }
 
@@ -57,7 +57,7 @@ async function checkLivestreamTwitch(channel, container) {
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const call = await response.json();
-                console.log( call );
+                console.log( call, call.data[0] !== undefined );
                 const isLive = call.data[0] !== undefined;
                 
                 // Update cache
