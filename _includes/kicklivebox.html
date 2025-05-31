@@ -117,6 +117,7 @@
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const data = await response.json();
+                console.log( data && data.session_title );
                 const isLive = data && data.session_title;
                 
                 // Update cache
