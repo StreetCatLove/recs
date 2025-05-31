@@ -51,7 +51,7 @@ async function checkLivestreamTwitch(channel, container, id) {
                         	}
                         }
                         // Step 1: Get user ID
-                        const userRes = await fetch(`https://api.twitch.tv/helix/users?login=${channelName}`, {
+                        const userRes = await fetch(`https://api.twitch.tv/helix/users?login=${channel}`, {
                         headers: { 'Client-ID': id }
                         });
                         const userData = await userRes.json();
