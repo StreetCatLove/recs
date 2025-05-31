@@ -110,8 +110,8 @@
                     // Single API call - response is null when offline
                     const response = await fetch(`https://kick.com/api/v2/channels/${channel}/livestream`);
                     const data = await response.json();
-                    console.log( data , data.id );
-                    if (data.id !== null) { 
+                    if (data !== null) {
+                        console.log( data );
                         isLive = true 
                         post.style.display = 'block';               
                     }
