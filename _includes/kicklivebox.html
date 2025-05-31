@@ -99,10 +99,10 @@
         
         // Run check with multiple initialization options
         if (document.readyState === 'complete') {
-            checkLivestreamKick();
+            checkLivestreamKick(channel);
         } else {
-            window.addEventListener('load', checkLivestreamKick);
-            document.addEventListener('DOMContentLoaded', checkLivestreamKick);
+            window.addEventListener('load', checkLivestreamKick(channel));
+            document.addEventListener('DOMContentLoaded', checkLivestreamKick(channel));
         }
     })();
     </script>
