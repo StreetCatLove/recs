@@ -1,4 +1,4 @@
-async function checkLivestreamKick(channel) {
+async function checkLivestreamKick(channel, container) {
             try {
                 // Check cache
                 const cacheKey = `kick_${channel}`;
@@ -8,7 +8,7 @@ async function checkLivestreamKick(channel) {
                 if (cached) {
                     const { isLive, timestamp } = JSON.parse(cached);
                     if (now - timestamp < CACHE_TTL) {
-                        if (isLive) showContainer();
+                        if (isLive) showContainer(container);
                         return;
                     }
                 }
@@ -27,7 +27,7 @@ async function checkLivestreamKick(channel) {
                     timestamp: now
                 }));
                 
-                if (isLive) showContainer();
+                if (isLive) showContainer(container);
                 
             } catch (error) {
                 console.error("Error checking stream status:", error);
@@ -35,12 +35,12 @@ async function checkLivestreamKick(channel) {
                 const cached = localStorage.getItem(`kick_${channel}`);
                 if (cached) {
                     const { isLive } = JSON.parse(cached);
-                    if (isLive) showContainer();
+                    if (isLive) showContainer(container);
                 }
             }
         }
         
-        function showContainer() {
+        function showContainer(container) {
             // Multiple ways to ensure element shows
             container.style.display = 'block';
             container.style.removeProperty('display');
