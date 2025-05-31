@@ -32,19 +32,53 @@ async function checkLivestreamKick(channel, container) {
                 
             } catch (error) {
                 console.error("Error checking stream status:", error);
-                // Fallback to cached value
-                const cached = localStorage.getItem(`kick_${channel}`);
-                if (cached) {
-                    const { isLive } = JSON.parse(cached);
-                    if (isLive) showContainer(container);
-                }
             }
-        }
+}
+
+async function checkLivestreamTwitch(channel, container, id) {
+            const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+            try {
+                        // Check cache
+                        const cacheKey = `twitch_${channel}`;
+                        const cached = localStorage.getItem(cacheKey);
+                        const now = Date.now();
+                        
+                        if (cached) {
+                                    const { isLive, timestamp } = JSON.parse(cached);
+                                    if (now - timestamp < CACHE_TTL) {
+	                                    if (isLive) showContainer(container);
+	                                    return;
+                        	}
+                        }
+                        // Step 1: Get user ID
+                        const userRes = await fetch(`https://api.twitch.tv/helix/users?login=${channelName}`, {
+                        headers: { 'Client-ID': id }
+                        });
+                        const userData = await userRes.json();
+                        const userId = userData.data?.[0]?.id;
+                        
+                        // Step 2: Check stream status
+                        const streamRes = await fetch(`https://api.twitch.tv/helix/streams?user_id=${userId}`, {
+                        headers: { 'Client-ID': id }
+                        });
+                        const streamData = await streamRes.json();
+		
+		if (streamData.data?.length > 0) showContainer(container);
+                        
+                        // Update cache
+                        localStorage.setItem(cacheKey, JSON.stringify({
+	                        isLive,
+	                        timestamp: now
+                        }));
+            } catch (error) {
+                        console.error("Twitch API error:", error);
+            }
+}
         
-        function showContainer(container) {
+function showContainer(container) {
             // Multiple ways to ensure element shows
             container.style.display = 'block';
             container.style.removeProperty('display');
             container.classList.remove('d-none'); // If using Bootstrap
             console.log("Container should now be visible", container);
-        }
+}
