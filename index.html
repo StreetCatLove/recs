@@ -16,9 +16,13 @@ title: Home
 
     {% for post in site.posts %}
 
-        {% if post.platform == 'kick' && isKickStreamLive(post.live) == true %}
+        {% if post.platform == 'kick' %}
 
-            {% include featuredbox.html %}
+            {% isKickStreamLive(post.live) == true %}
+
+                {% include featuredbox.html %}
+
+            {% endif %}
 
         {% endif %}
 
