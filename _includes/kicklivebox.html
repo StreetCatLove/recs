@@ -88,8 +88,9 @@
 <script>
 (function() {
     const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
-    const post = document.currentScript.closest('.kick-post');
-    const channel = post?.dataset.channel;
+    //const post = document.currentScript.closest('.kick-post');
+    //const channel = post.dataset.channel;
+    const channel = '{{ post.live }}';
     console.log(channel);
 
     async function checkLivestream() {
