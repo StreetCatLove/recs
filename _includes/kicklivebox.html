@@ -117,8 +117,8 @@
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const call = await response.json();
-                console.log( call , call.data?.sesstion_title );
-                const isLive = call.data?.session_title !== null;
+                console.log( call );
+                const isLive = call !== undefined;
                 
                 // Update cache
                 localStorage.setItem(cacheKey, JSON.stringify({
