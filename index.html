@@ -21,7 +21,9 @@ title: Home
             <script>
                 let ch = "{{post.live}}"; 
                 let isLive =  await isKickStreamLive(ch);
-                if isLive = { {% include featuredbox.html %} }
+                if (isLive) = { 
+                    {% include featuredbox.html %} 
+                }
             </script>
 
         {% endif %}
