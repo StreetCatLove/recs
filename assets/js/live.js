@@ -83,7 +83,7 @@ async function checkLivestreamTwitch(channel, container) {
 			};
 			
 			document.body.appendChild(iframe);
-			}
+		
             } catch (error) {
                         console.error("Twitch error:", error);
             }
