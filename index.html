@@ -18,11 +18,11 @@ title: Home
 
         {% if post.platform == 'kick' %}
 
-            {% <%= isKickStreamLive(post.live)  %> == true %}
-
-                {% include featuredbox.html %}
-
-            {% endif %}
+            <script>
+                let ch = "{{post.live}}"; 
+                let isLive =  await isKickStreamLive(channelName);
+                if isLive = { {% include featuredbox.html %} }
+            </script>
 
         {% endif %}
 
