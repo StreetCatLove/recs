@@ -88,7 +88,10 @@
 <script>
 (function() {
     const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
-    const channel = post.live;
+    const post = document.currentScript.closest('.kick-post');
+    const channel = post?.dataset.channel;
+    
+    if (!channel) return;
 
     async function checkLivestream() {
         try {
@@ -120,8 +123,10 @@
             
         } catch (error) {
             console.error("Error checking stream status:", error);
+            // Optional: Fallback to cached value if available
         }
     }
+    
     // Run the check when the page loads
     document.addEventListener('DOMContentLoaded', checkLivestream);
 })();
