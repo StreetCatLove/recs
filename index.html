@@ -2,8 +2,32 @@
 layout: default
 title: Home
 ---
+<script src="{{ site.baseurl }}/assets/js/kick.js"></script>
 
 {% if page.url == "/" %}
+
+<!-- Live
+================================================== -->
+<section class="featured-posts">
+    <div class="section-title">
+        <h2><span>Live</span></h2>
+    </div>
+    <div class="row">
+
+    {% for post in site.posts %}
+
+        {% if post.platform == 'kick' && isKickStreamLive(post.live) %}
+
+            {% include featuredbox.html %}
+
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+</section>
+
+{% endif %}
 
 <!-- Featured
 ================================================== -->
