@@ -118,7 +118,7 @@
                 
                 const call = await response.json();
                 console.log( call );
-                const isLive = call !== undefined;
+                const isLive = call.data !== null;
                 
                 // Update cache
                 localStorage.setItem(cacheKey, JSON.stringify({
