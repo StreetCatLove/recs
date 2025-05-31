@@ -22,6 +22,12 @@ title: Home
 
         {% endif %}
 
+        {% if post.platform == 'twitch' %}
+
+            {% include twitchlivebox.html %} 
+
+        {% endif %}
+
     {% endfor %}
 
     </div>
