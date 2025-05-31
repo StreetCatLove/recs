@@ -63,7 +63,7 @@ async function checkLivestreamTwitch(channel, container, id) {
                         });
                         const streamData = await streamRes.json();
 		
-		if (streamData.data?.length > 0) showContainer(container);
+			if (streamData.data?.length > 0) showContainer(container);
                         
                         // Update cache
                         localStorage.setItem(cacheKey, JSON.stringify({
