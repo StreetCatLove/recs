@@ -92,6 +92,7 @@
     //const channel = post.dataset.channel;
     const channel = '{{ post.live }}';
     //console.log(channel);
+    let isLive = false;
 
     async function checkLivestream() {
         try {
@@ -113,11 +114,8 @@
             const data = await response.json();
             //console.log(data);
             if (data !== null) { 
-                const isLive = true 
+                isLive = true 
                 post.style.display = 'block';               
-            }
-            else { 
-                const isLive = false 
             }
             
             // Update cache
