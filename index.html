@@ -18,13 +18,7 @@ title: Home
 
         {% if post.platform == 'kick' %}
 
-            <script>
-                let ch = "{{post.live}}"; 
-                let isLive =  await isKickStreamLive(ch);
-                if (isLive) = { 
-                    {% include featuredbox.html %} 
-                }
-            </script>
+                    {% include kicklivebox.html %} 
 
         {% endif %}
 
