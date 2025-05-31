@@ -35,7 +35,7 @@ async function checkLivestreamKick(channel, container) {
             }
 }
 
-async function checkLivestreamTwitch(channel, container, id) {
+async function checkLivestreamTwitch(channel, container) {
             const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
             try {
                         // Check cache
@@ -50,28 +50,42 @@ async function checkLivestreamTwitch(channel, container, id) {
 	                                    return;
                         	}
                         }
-                        // Step 1: Get user ID
-                        const userRes = await fetch(`https://api.twitch.tv/helix/users?login=${channel}`, {
-                        headers: { 'Client-ID': id }
-                        });
-                        const userData = await userRes.json();
-                        const userId = userData.data?.[0]?.id;
-                        
-                        // Step 2: Check stream status
-                        const streamRes = await fetch(`https://api.twitch.tv/helix/streams?user_id=${userId}`, {
-                        headers: { 'Client-ID': id }
-                        });
-                        const streamData = await streamRes.json();
-		
-			if (streamData.data?.length > 0) showContainer(container);
-                        
-                        // Update cache
-                        localStorage.setItem(cacheKey, JSON.stringify({
-	                        isLive,
-	                        timestamp: now
-                        }));
+		    	//embed approach
+			const iframe = document.createElement('iframe');
+			iframe.src = `https://player.twitch.tv/?channel=${channel}&parent=${location.hostname}`;
+			iframe.style.display = 'none';
+			
+			// Event handlers
+			iframe.onload = function() {
+			const player = new Twitch.Player(iframe);
+			
+			player.addEventListener(Twitch.Player.READY, function() {
+			  const isLive = !player.getEnded(); // True if stream is live
+			  console.log(channel, isLive);
+			  // Update cache
+			  localStorage.setItem(cacheKey, JSON.stringify({
+			    isLive,
+			    timestamp: Date.now()
+			  }));
+			
+			  if (isLive) showContainer();
+			  
+			  // Cleanup
+			  setTimeout(function() {
+			    document.body.removeChild(iframe);
+			  }, 1000);
+			});
+			};
+			
+			iframe.onerror = function() {
+				console.log('Twitch embed failed for channel:', channel);
+				document.body.removeChild(iframe);
+			};
+			
+			document.body.appendChild(iframe);
+			}
             } catch (error) {
-                        console.error("Twitch API error:", error);
+                        console.error("Twitch error:", error);
             }
 }
         
