@@ -96,7 +96,7 @@ async function checkLivestreamYT(channel, container) {
         if (!response.ok) throw new Error(`YouTube API error! status: ${response.status}`);
         
         const call = await response.json();
-	console.log( call );
+	console.log( `${channel}`, call );
         const isLive = call.items && call.items.length > 0;
         
         // Update cache
