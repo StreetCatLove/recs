@@ -11,13 +11,13 @@ comments: false
 
 The TransCend streaming crew is a group of trans creators creating a growing inclusive community!
 
-* <a href="twitch.tv/BakedRiemannZeta">BakedRiemannZeta's Channel</a>
+* <a href="https://twitch.tv/BakedRiemannZeta">BakedRiemannZeta's Channel</a>
 * <a href="https://allmylinks.com/adriennevixen">Adrienne Vixen's Links</a>
-* <a href="twitch.tv/Vightingale">Vightingale's Channel</a>
-* <a href="twitch.tv/CarlasWildRide">Carla's Wild Ride Channel</a>
-* <a href="twitch.tv/Nabeel225">Nabeel's Channel</a>
-* <a href="twitch.tv/PattyOBaggins">Patty's Channel</a>
-* <a href="twitch.tv/JohnathanRoss">Jonathan Ross' Channel</a>
-* <a href="twitch.tv/GothixBunni">Gothix Bunni's Channel</a>
-* <a href="twitch.tv/thesaucetossers">The Sauce Tossers' Channel</a>
-* <a href="twitch.tv/TransCendTTV">TransCend Channel</a>
+* <a href="https://twitch.tv/Vightingale">Vightingale's Channel</a>
+* <a href="https://twitch.tv/CarlasWildRide">Carla's Wild Ride Channel</a>
+* <a href="https://twitch.tv/Nabeel225">Nabeel's Channel</a>
+* <a href="https://twitch.tv/PattyOBaggins">Patty's Channel</a>
+* <a href="https://twitch.tv/JohnathanRoss">Jonathan Ross' Channel</a>
+* <a href="https://twitch.tv/GothixBunni">Gothix Bunni's Channel</a>
+* <a href="https://twitch.tv/thesaucetossers">The Sauce Tossers' Channel</a>
+* <a href="https://twitch.tv/TransCendTTV">TransCend Channel</a>
