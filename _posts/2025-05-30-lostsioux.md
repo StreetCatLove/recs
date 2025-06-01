@@ -4,7 +4,7 @@ title:  "Lost Sioux"
 author: street_cat
 categories: [ streamer, indigenous ]
 image: assets/images/lostsioux.jpg
-featured: true
+featured: false
 hidden: false
 comments: false
 platform: twitch
