@@ -13,5 +13,5 @@ live: d1mitri0s
 
 προλετάριος
 
-<a href="https://kick.com/d1mitri0s">D1mitri0s' Channel</a>
+<a href="https://twitch.tv/d1mitri0s">D1mitri0s' Channel</a>
 
