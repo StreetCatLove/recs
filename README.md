@@ -17,3 +17,4 @@ Copy this Site
 * simple posts with <a href="https://www.markdownguide.org/basic-syntax/">markdown syntax</a>
 * edit post metadate to control tags, author, featured posts, live platform & username - kick and twitch currently supported
 * easily include any embeded html elements
+* use with a timer in your stream or add to your links page to promote your favorite creators
