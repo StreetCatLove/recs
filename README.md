@@ -3,7 +3,7 @@ Copy this Site
 * Create a Github account. Consider what your future URL might be - yourusername.github.io
 * Create a new blank repository or fork <a href="https://github.com/StreetCatLove/recs">the original repo</a> to keep connected with updates
 * To make the url yourusername.github.io, name the repository yourusername.github.io - ex. streetcatlove.github.io
-* To make the url yourusername.github.io/xyz, name the repository xyz - ex. recs
+* To make the url yourusername.github.io/xyz, name the repository xyz - ex. recs for steetcatlove.github.io/recs
 * For a blank repo, download <a href="https://github.com/StreetCatLove/recs/archive/refs/heads/main.zip">zip of this repo</a>, unzip the downloaded file, and upload all extracted files into your repo to establish the starting point
 * Within your repo's settings go to the Pages tab. Within the Pages tab, change the branch to main, and press save to publish the site.
 * You will need to customise a few files to make it your own. Once a change is made to the repo it will take 1-2 minutes for the site to automatically deploy the updates.
