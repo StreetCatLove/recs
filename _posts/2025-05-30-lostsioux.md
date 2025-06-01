@@ -3,7 +3,7 @@ layout: post
 title:  "Lost Sioux"
 author: street_cat
 categories: [ streamer, indigenous ]
-image: assets/images/lar.jpg
+image: assets/images/lostsioux.jpg
 featured: true
 hidden: false
 comments: false
