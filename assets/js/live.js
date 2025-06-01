@@ -1,5 +1,5 @@
 async function checkLivestreamKick(channel, container) {
-            const CACHE_TTL = 2 * 60 * 1000; // 5 minutes cache
+            const CACHE_TTL =  60 * 1000; // 1 minutes cache
             try {
                 // Check cache
                 const cacheKey = `kick_${channel}`;
@@ -36,7 +36,7 @@ async function checkLivestreamKick(channel, container) {
 }
 
 async function checkLivestreamTwitch(channel, container) {
-            const CACHE_TTL = 2 * 60 * 1000; // 5 minutes cache
+            const CACHE_TTL = 60 * 1000; // 1 minutes cache
             try {
                         // Check cache
                         const cacheKey = `twitch_${channel}`;
