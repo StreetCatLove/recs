@@ -57,7 +57,7 @@ async function checkLivestreamTwitch(channel, container) {
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const call = await response.json();
-                console.log( call, call.data[0] !== undefined );
+                console.log( `${channel}`, call, call.data[0] !== undefined );
                 const isLive = call.data[0] !== undefined;
                 
                 // Update cache
