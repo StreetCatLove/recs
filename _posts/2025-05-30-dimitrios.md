@@ -8,10 +8,10 @@ featured: false
 hidden: false
 comments: false
 platform: twitch
-live: d1mitri0s
+live: D1mitri0s
 ---
 
 προλετάριος
 
-<a href="https://twitch.tv/d1mitri0s">D1mitri0s' Channel</a>
+<a href="https://twitch.tv/D1mitri0s">D1mitri0s' Channel</a>
 
