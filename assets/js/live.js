@@ -73,6 +73,44 @@ async function checkLivestreamTwitch(channel, container) {
                 console.error("Error checking stream status:", error);
             }
 }
+
+async function checkLivestreamYT(channel, container) {
+    const CACHE_TTL = 60 * 1000; // 1 minute cache
+    const apiKey = AIzaSyBXSrQJIoD_CQCvqhRcLw4yPrW1_HarxpI;
+    try {
+        // Check cache
+        const cacheKey = `youtube_${channel}`;
+        const cached = localStorage.getItem(cacheKey);
+        const now = Date.now();
+        
+        if (cached) {
+            const { isLive, timestamp } = JSON.parse(cached);
+            if (now - timestamp < CACHE_TTL) {
+                if (isLive) showContainer(container);
+                return;
+            }
+        }
+        
+        // API call to search for live broadcasts by channel ID
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channel}&eventType=live&type=video&key=${apiKey}`);
+        if (!response.ok) throw new Error(`YouTube API error! status: ${response.status}`);
+        
+        const call = await response.json();
+	console.log( call );
+        const isLive = call.items && call.items.length > 0;
+        
+        // Update cache
+        localStorage.setItem(cacheKey, JSON.stringify({
+            isLive,
+            timestamp: now
+        }));
+        
+        if (isLive) showContainer(container);
+        
+    } catch (error) {
+        console.error("Error checking YouTube stream status:", error);
+    }
+}
         
 function showContainer(container) {
             // Multiple ways to ensure element shows
