@@ -6,7 +6,8 @@ Copy this Site
 * To make the url yourusername.github.io, name the repository yourusername.github.io - ex. streetcatlove.github.io
 * To make the url yourusername.github.io/xyz, name the repository xyz - ex. recs
 * Unzip the downloaded file, and upload all extracted files into your repo
-* You will need to customise a few files to make it your own
+* Within your repo's settings go to the Pages tab. Change the branch to main and save to publish the site.
+* You will need to customise a few files to make it your own. Once making a change to the repo it will take 1-2 minutes for the site to automatically deploy the updates
 * _config.yml - update name, title, description, baseurl, and author profile as desired
 * _layouts/default.html - update navbar - photo and nav-item links
 * _pages/about.md - add a bio
