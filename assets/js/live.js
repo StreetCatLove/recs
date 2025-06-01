@@ -65,7 +65,8 @@ async function checkLivestreamTwitch(channel, container) {
                     isLive,
                     timestamp: now
                 }));
-                
+
+		console.log( isLive );
                 if (isLive) showContainer(container);
                 
             } catch (error) {
