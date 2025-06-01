@@ -53,7 +53,8 @@ async function checkLivestreamTwitch(channel, container) {
 
 		    	
 		 // API call
-                const response = await fetch(`https://twitch-proxy.freecodecamp.rocks/helix/streams?user_login=${channel}`);
+		    
+                const response = await fetch(`https://wandering-heart-07e4.streetcatlove.workers.dev/streams?user_login=${channel}`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const call = await response.json();
