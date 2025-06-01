@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "d1mitri0s"
+title:  "D1mitri0s"
 author: street_cat
 categories: [ streamer, gaming ]
 image: assets/images/d1m.jpg
