@@ -33,7 +33,7 @@
                             
                             <div class="youtube-status" style="margin-top: 10px;">
                                 <span class="live-badge">🔴 LIVE NOW</span>
-                                <a href="https://youtube.com/{{ post.live }}" target="_blank" class="watch-link">Watch Stream</a>
+                                <a href="https://www.youtube.com/@{{ post.live }}/live" target="_blank" class="watch-link">Watch Stream</a>
                             </div>
                         </div>
                         <div class="card-footer b-0 bg-white mt-auto">
@@ -93,7 +93,7 @@
             return;
         }
         
-        const channel = container.dataset.channel;
+        const channel = container.dataset.id;
         if (!channel) return;
         
         // Run check with multiple initialization options
