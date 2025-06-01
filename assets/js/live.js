@@ -76,7 +76,7 @@ async function checkLivestreamTwitch(channel, container) {
 
 async function checkLivestreamYT(channel, container) {
     const CACHE_TTL = 60 * 1000; // 1 minute cache
-    const apiKey = AIzaSyBXSrQJIoD_CQCvqhRcLw4yPrW1_HarxpI;
+    const apiKey = `AIzaSyBXSrQJIoD_CQCvqhRcLw4yPrW1_HarxpI`;
     try {
         // Check cache
         const cacheKey = `youtube_${channel}`;
