@@ -16,5 +16,5 @@ Copy this Site
 * add or remove posts as desired to feature your favorite creators
 * simple posts with <a href="https://www.markdownguide.org/basic-syntax/">markdown syntax</a>
 * edit post metadate to control tags, author, featured posts, live platform & username - kick, twitch, youtube (with Channel ID) currently supported
-* easily include any embeded html elements
-* use with a timer in your stream or add to your links page to promote your favorite creators
+* easily include any embeded html element in creator posts
+* use with a timer in your stream or add to your links page to promote your favorite creators at all times
