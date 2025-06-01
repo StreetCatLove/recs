@@ -8,11 +8,11 @@ Copy this Site
 * Unzip the downloaded file, and upload all extracted files into your repo
 * You will need to customise a few files to make it your own
 * _config.yml - update name, title, description, baseurl, and author profile as desired
-* _layouts/default.html - update navbar nav-item links
+* _layouts/default.html - update navbar - photo and nav-item links
 * _pages/about.md - add a bio
-* assets/images/avatar.png - add your avitar
+* assets/images/avatar.jpg - add your avitar
 * assets/images/jumbotron.jpg - 3x2 aspect ratio recommended, this will show up at the bottom of the page by the tags
-* favicon.ico - 32x32 or 64x64, you can rename a png to ico
+* favicon.ico - 32x32 or 64x64 recommended, you can rename a png to ico
 * add or remove posts as desired to feature your favorite creators
 * simple posts with <a href="https://www.markdownguide.org/basic-syntax/">markdown syntax</a>
 * edit post metadate to control tags, author, featured posts, live platform & username - kick and twitch currently supported
