@@ -15,6 +15,6 @@ Copy this Site
 * favicon.ico - 32x32 or 64x64 recommended, you can rename a png to ico
 * add or remove posts as desired to feature your favorite creators
 * simple posts with <a href="https://www.markdownguide.org/basic-syntax/">markdown syntax</a>
-* edit post metadate to control tags, author, featured posts, live platform & username - kick and twitch currently supported
+* edit post metadate to control tags, author, featured posts, live platform & username - kick, twitch, youtube (with Channel ID) currently supported
 * easily include any embeded html elements
 * use with a timer in your stream or add to your links page to promote your favorite creators
