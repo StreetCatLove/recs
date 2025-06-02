@@ -7,7 +7,7 @@ async function handleRequest(request) {
   let response = await fetch(ytURL);
   response = new Response(response.body, response);
   // Set CORS headers
-  response.headers.set('Access-Control-Allow-Origin', 'https://your_site.github.io'); // Allow all
+  response.headers.set('Access-Control-Allow-Origin', '*'); // Allow all
 
   return response;
 }
