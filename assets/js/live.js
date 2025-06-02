@@ -76,7 +76,7 @@ async function checkLivestreamTwitch(channel, container) {
 }
 
 async function checkLivestreamYT(channel, container) {
-    const CACHE_TTL = 5 * 60 * 1000; // 5 minute cache
+    const CACHE_TTL = 10 * 60 * 1000; // 10 minute cache
     
     try {
         // Check cache
