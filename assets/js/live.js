@@ -93,7 +93,7 @@ async function checkLivestreamYT(channel, container) {
         }
         
         // API call to search for live broadcasts by channel ID
-        const response = await fetch(`https://twilight-boat-0f68.streetcatlove.workers.dev/youtube/v3/search?part=snippet&channelId=${channel}&eventType=live&type=video`);
+        const response = await fetch(`https://twilight-boat-0f68.streetcatlove.workers.dev/search?part=snippet&channelId=${channel}&eventType=live&type=video`);
         if (!response.ok) throw new Error(`YouTube API error! status: ${response.status}`);
         
         const call = await response.json();
