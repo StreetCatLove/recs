@@ -77,7 +77,7 @@ async function checkLivestreamTwitch(channel, container) {
 
 async function checkLivestreamYT(channel, container) {
     const CACHE_TTL = 5 * 60 * 1000; // 5 minute cache
-    const apiKey = `AIzaSyBXSrQJIoD_CQCvqhRcLw4yPrW1_HarxpI`;
+    
     try {
         // Check cache
         const cacheKey = `youtube_${channel}`;
@@ -93,7 +93,7 @@ async function checkLivestreamYT(channel, container) {
         }
         
         // API call to search for live broadcasts by channel ID
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channel}&eventType=live&type=video&key=${apiKey}`);
+        const response = await fetch(`https://twilight-boat-0f68.streetcatlove.workers.dev/youtube/v3/search?part=snippet&channelId=${channel}&eventType=live&type=video`);
         if (!response.ok) throw new Error(`YouTube API error! status: ${response.status}`);
         
         const call = await response.json();
