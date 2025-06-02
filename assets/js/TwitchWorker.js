@@ -11,7 +11,7 @@ async function handleRequest(request) {
   });
   response = new Response(response.body, response);
   // Set CORS headers
-  response.headers.set('Access-Control-Allow-Origin', 'https://your_site.github.io'); 
+  response.headers.set('Access-Control-Allow-Origin', '*'); 
 
   return response;
 }
