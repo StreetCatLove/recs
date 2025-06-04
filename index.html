@@ -15,6 +15,9 @@ title: Home
     </div>
     <div class="row">
 
+    {% assign n = site.posts | size %}
+    {% assign posts = site.posts | sample: n %}
+
     {% for post in site.posts %}
 
         {% if post.platform == 'kick' %}
@@ -47,6 +50,9 @@ title: Home
         <h2><span>Featured</span></h2>
     </div>
     <div class="row">
+
+    {% assign n = site.posts | size %}
+    {% assign posts = site.posts | sample: n %}
 
     {% for post in site.posts %}
 
