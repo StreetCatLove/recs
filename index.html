@@ -75,10 +75,13 @@ title: Home
 
     <div class="row listrecent">
     
-        {% assign n = paginator.posts | size %}
-        {% assign posts = paginator.posts | sample: n %}
+        {% assign n = site.posts | size %}
+        {% assign posts = site.posts | sample: n %}
+
         {% for post in posts %}
-            {% include postbox.html %}
+            {% if post.featured !== true %}
+                {% include postbox.html %}
+            {% endif %}
         {% endfor %}
 
     </div>
