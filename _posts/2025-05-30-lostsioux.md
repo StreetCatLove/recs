@@ -11,7 +11,7 @@ platform: twitch
 live: lostsioux
 ---
 
-Dakota nation a p.o.w from the Indian wars aka 60's scoop,
+Dakota nation a p.o.w from the Indian wars aka 60's scoop
 
 <a href="https://www.twitch.tv/lostsioux">Lost Sioux's Channel</a>
 
