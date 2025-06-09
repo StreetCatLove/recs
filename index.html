@@ -20,7 +20,7 @@ title: Home
 
     {% for post in site.posts %}
 
-        {% if post.platform == 'sos' %}
+        {% if post.sos-link != null %}
 
             {% include sosbox.html %} 
 
