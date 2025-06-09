@@ -20,9 +20,21 @@ title: Home
 
     {% for post in site.posts %}
 
+        {% if post.sos == 'true' %}
+
+            {% include sosbox.html %} 
+
+        {% endif %}
+
         {% if post.platform == 'kick' %}
 
             {% include kicklivebox.html %} 
+
+        {% endif %}
+
+        {% if post.platform == 'youtube' %}
+
+            {% include youtubelivebox.html %} 
 
         {% endif %}
 
@@ -32,11 +44,7 @@ title: Home
 
         {% endif %}
 
-        {% if post.platform == 'youtube' %}
 
-            {% include youtubelivebox.html %} 
-
-        {% endif %}
 
     {% endfor %}
 
