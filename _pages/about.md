@@ -12,6 +12,7 @@ comments: false
 <p>street cats of all countries, unite!</p>
 <p>public health & defense of colonized nations 🇨🇺 🇵🇸 🇰🇵</p>
 <p>free turtle island</p>
+<a href="https://streetcatlove.github.io">Street Cat's Links</a>
 
 
 </div>
