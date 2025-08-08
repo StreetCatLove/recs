@@ -18,4 +18,4 @@ Copy this Site
 * edit post metadate to control tags, author, featured posts, live platform & username - kick, twitch (username case sensitive) , youtube (with channel ID) currently supported
 * easily include any embeded html element in creator posts
 * use with a timer in your stream or add to your links page to promote your favorite creators at all times
-* this site relies on my quota limits for the google api - if the limits get hit, the youtube integration will not funtion for the rest of the day. set up your own proxy for free with cloudflare workers and a google api key using the included assets/js/YTWorker.js and a update to the youtube endpoint in assets/js/live.js
+* the site as-is relies on my api keys via proxy and there is a quota limit for the google api - if the limit gets hit, the youtube integration will not funtion for the rest of the day. set up your own proxy for free with cloudflare workers and a google api key using the included assets/js/YTWorker.js and a update to the youtube endpoint in assets/js/live.js
