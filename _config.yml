@@ -1,0 +1,62 @@
+# Site
+name: "Street Cat's Recommended Outlets"
+title: "Street Cat's Recommended Outlets"
+description: "find based content here"
+logo: 'assets/images/avatar.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: /recs
+google_analytics: 
+disqus: 
+mailchimp-list: 
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  street_cat:
+    name: Street Cat
+    display_name: Street Cat Love
+    gravatar: 
+    email: 
+    web: https://streetcatlove.github.io
+    twitter: https://twitter.com/street_cat_love
+    description: "street cat restreamer and archivist for ending colonialism. street cats of all countries, unite!"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: 
+adsense-data-ad-slot: 
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "enabled"
+
+exclude: [changelog.md, LICENSE.txt, Gemfile, Gemfile.lock]

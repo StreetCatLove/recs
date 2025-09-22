@@ -1,0 +1,113 @@
+---
+layout: default
+title: Home
+---
+<script src="{{ site.baseurl }}/assets/js/live.js"></script>
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+
+{% if page.url == "/" %}
+
+<!-- Live
+================================================== -->
+<section class="featured-posts">
+    <div class="section-title">
+        <h2><span>Live</span></h2>
+    </div>
+    <div class="row">
+
+    {% assign n = site.posts | size %}
+    {% assign posts = site.posts | sample: n %}
+
+    {% for post in site.posts %}
+
+        {% if post.sos-link != null %}
+
+            {% include sosbox.html %} 
+
+        {% endif %}
+
+        {% if post.platform == 'kick' %}
+
+            {% include kicklivebox.html %} 
+
+        {% endif %}
+
+        {% if post.platform == 'youtube' %}
+
+            {% include youtubelivebox.html %} 
+
+        {% endif %}
+
+        {% if post.platform == 'twitch' %}
+
+            {% include twitchlivebox.html %} 
+
+        {% endif %}
+
+
+
+    {% endfor %}
+
+    </div>
+</section>
+
+<!-- Featured
+================================================== -->
+<section class="featured-posts">
+    <div class="section-title">
+        <h2><span>Featured</span></h2>
+    </div>
+    <div class="row">
+
+    {% assign n = site.posts | size %}
+    {% assign posts = site.posts | sample: n %}
+
+    {% for post in site.posts %}
+
+        {% if post.featured == true %}
+
+            {% include featuredbox.html %}
+
+        {% endif %}
+
+    {% endfor %}
+
+    </div>
+</section>
+
+{% endif %}
+
+<!-- Posts Index
+================================================== -->
+<section class="recent-posts">
+
+    <div class="section-title">
+
+        <h2><span>All Posts</span></h2>
+
+    </div>
+
+    <div class="row listrecent">
+    
+        {% assign n = site.posts | size %}
+        {% assign posts = site.posts | sample: n %}
+
+        {% for post in posts %}
+            {% if post.featured != true %}
+                {% include postbox.html %}
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Pagination
+================================================== -->
+<div class="bottompagination">
+<div class="pointerup"><i class="fa fa-caret-up"></i></div>
+<span class="navigation" role="navigation">
+    {% include pagination.html %}
+</span>
+</div>
+
