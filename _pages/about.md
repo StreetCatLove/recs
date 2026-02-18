@@ -8,10 +8,9 @@ comments: false
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>street cat restreamer and archivist for ending colonialism</p>
+<p>street cat content LIVE 24/7</p>
 <p>street cats of all countries, unite!</p>
-<p>public health & defense of colonized nations 🇨🇺 🇵🇸 🇰🇵</p>
-<p>free turtle island</p>
+<p>public health 😷 & defense of all colonized nations 🇨🇺 🇵🇸 🇰🇵 🇸🇩 🇻🇪 🐅</p>
 <a href="https://streetcatlove.github.io">Street Cat's Links</a>
 
 
