@@ -4,7 +4,7 @@ title:  "Transcend Crew"
 author: street_cat
 categories: [ streamer, 2slgbtqia+ ]
 image: assets/images/trans.jpg
-featured: true
+featured: false
 hidden: false
 comments: false
 ---
